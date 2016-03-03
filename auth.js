@@ -54,7 +54,7 @@ function search() {
         var results = response.result;
         $.each(results.items, function(index, item) {
             var tag = document.createElement("div");
-            tag.setAttribute("class", "item  col-md-offset-4");
+            tag.setAttribute("class", "item  col-md-6 col-md-offset-4");
             var heading = document.createElement("h2");
             var textnode1 = document.createTextNode(item.snippet.title);
             heading.appendChild(textnode1);
