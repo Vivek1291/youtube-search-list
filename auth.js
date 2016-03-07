@@ -33,13 +33,9 @@ function handleAuthResult(authResult) {
 }
 function loadApiClientInterfaces() {
     gapi.client.load('youtube', 'v3', function() {
-        handleAPILoaded();
     });
 }
-function handleAPILoaded() {
-    $('#search-button').attr('disabled', false);
-}
-function search() {
+$("#search-button").click(function() {
     var q =$('#query').val();
     console.log(q);
     var request = gapi.client.youtube.search.list({
@@ -67,4 +63,4 @@ function search() {
         });
     });
 
-}
+});
